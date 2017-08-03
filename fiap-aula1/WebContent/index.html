@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<title>JAVA na WEB</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<!-- Reference: https://www.w3schools.com/w3css/w3css_templates.asp -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASEAAACuCAMAAABOUkuQAAABZVBMVEX////+/v79/f34+Pj8/Pz29vb19fX7+/v6+vr8//////3///z6///bVED///rbUT3Sa1YAdrz///b06+XVSDDcWUoAeLoAbbEAb7jTSzndTzf6//3Xj4UAebjcVD0Ad7oAbLUAbK4AbLcAb6zryMTcUkQAc78Aa7DfU0PgTza00N4AerXj8vXZTCneQDDw4NvUVz3luK/XXEnv//8Aabns1NHdQCU6ibPjjonWjXzS6++fx93esp9oo8slfbPXgXLhqJzWl4fVQzVelsEfh5vlRifXo552rMhfnbzkysT//O3VXk+LxNni7+/A2OXcppMAaMFzptPbfG4PfKnWiHztsazVUSmTvd3hblXfnZbXYl/bUU5IlsqJtcvmn4rKZ1WBqsO+4OXS4/G0zeI+ibAVeZ1pn9KiytFOjMGx2el7q8+Qw8fd5eP049bhOyzawL/edHXYMA/46O7VeWDYu6vXhm7tqafvqk/QAAAbJElEQVR4nO2djUMax7bAd9cVmNlhkV0E3BFQvnTlU1EwENHos5rQ0NYkTU1DW03ea+K95va2t/fvf+fMgoJibASNNJzem0RgZ3d/njlfc2aRXGP5uEg9P02OZXLyKkKf+7rum1wiJF6dGIsj3YjahNpwPB7P5720zy8ejwPhDJLU1qDzd8fSVpNuQgIQvuMei9t9BslBJHWmmHjZrY5FbVNCKG1CXRr0uS/uvojb0SJhitqEzvkoX7x0ELXnWRchdUxIiHqOqIeQ+xyP/AXLGSN3R4kkYajbKvRFs+mS84kmCIEKtY3QGFBHEBE6tG5CaoeQ9MXLOaGJMaG+0o/QBBISJvpzX919kB5CrjGhy3I3hEaZ9UcIDc8KyRN8dBkJZ6bcNqHJSW1M6KMnmUgydVQR3QkhhW0ytzKkwe5a7ohQw0XIkAa7a7mbWcZW1oisDWm0O5a7IUQaW0wZUSW6I0I/HHB1TOhqUciKl4916COiSD7bo9EhjXbHcgeE4ARmvmzSMaGrzgD/Py2XzWGM9TnkDgjJMlnfzZvjmPqq8RU3MWfsgElGFNEdENLZYT4wrdIxob6iKJSdBix7iiljS913cKJw6SBnlR8RdZx19B1cc7PlXcsqr9Gxt+87tMzB00ctK+rhI2qGbpGQsxRXOvXaPmv3GzKq5aFbJkS4OZ2z7FzZ5VFGFdFtEYJDCYxhTNkWEPqJUWU8yy6Nq8jcnLKB0PfTE2x0F99uiZBoKyG/r5StqJ3PnXL36C5w3wohWZJV7maFIiiQZZe3WPdIo4bqdgjJsk7Y4+8tBJRfL6m9bw7hsu9QboeQCpH0cn7XBzqUe0AUvfM6pxqRmQRJ7OhgugVCsuqhXJkto5HO7a531RZlN0w+Yv5rzTNChvs2dEhWS7//lsuhESo/0tm5n5cVwguzj0w2Sn0lt0CIq+T0h7KwQeUXjCAgPIViEDKRfPXqlBBllMLHIROCQ1S1lIQJZoObDySZLsaQJUVhzNyy8suoU/IohY9DJyTLbAsmGEyx3VcFpgplkSkn5HQ99+/nJlM5vPTFEgIXxVW+jjMsapcPJsUKGaSvioeYszO7M8uEjI796ciwCTHjoBxFJ1Y+5CXFGZ3w09lc+cOBybh7lLTHkaES4hpz/YGAojaYIKqiSda5ZBxul7dz3+gw50awSjREQjLhxJwqi2R+5ZQjDJlohPznx4DPDjwGXKOHRxquDhFmNnbBh1n2lMk8VBDi5mYZiE0XFM+XTkiW3dxzAImGbe3+YTCdc0VmGnu8mPdZ9opJ3CM4wYQMi5CMAc/sbtSy7d0DgxjiJZUd5myvvbvyO3OPKJ9hEnKz5TLGQfaUi6sYFmrUffBhEXSqWCh5RnU9cXiEFJWYUbDRkM7/zjU8VuEGmCBfys6vMfcoJWIXZFiEIFKc/QBTLFdexrZXyCsIe1De9lne3UPmpvKYECGFPITSvt1NrmhU2KBliIwWfVZKxzxjZAENzw5JW7uYzpeTDFMxWeVmEYD5tvNbbJC1st5r+Bych6ZDRgMjod1Xhmi+l1XyXzBCPp+VN8eEhJAnWDCzdr9yCmZU440cELLsbXmwVaXu7dqq+hl6bIZGyMwJQklRMZM06grgJPPZXnLzjgZRSyHsXAi/+80PQ7NDBUEoV5BFr5mmmGUgBP8F5Jt3CePFuWa75Cth9e9WhkWInWJVyM6ZXORjMjfzOMksu1wg/KZbp2Qqy2ZAlOOE2FOfYYvR8GYZ3oddNqksCFFtWhhqK/ATI4MQcvm8Z+KbIqNLSGE/CEIFQUiS3ewgJxDZ2+bNdQjEnMkHULZ9I05IJt+UkVDS8WWyQpKOt/fl10s3XTbBa5tIrglJzkQvE5IdueHY50d/bIRhEdLZacD2WeVD7haWmWhaw3bmWTlJbngbMFlVxXFirBDwXUnoZmN3E+r56fIHh0GIEnYAQbXd4O2+aUqWy17H4RdNotEb3QbFhE6DP9Fipy4SgguXNV3XZUI/0cOhqYRhqay1H/xCdDdRmFsjl6t8Q5tllBXKkLkGTln7KE7++GAJf1b+gzFtoHCYUsUMXLJDMoSTBBffyKe2AciinEUUhRDn0RQK1wjnOuGMXf7s0Aixw7xtlX+S2hEiTgyHkFXektjghC7bIUKobhgGv1HEBcpnGLpoupAlRfrX7GxynT8o3B4h+LyxYsOUMhS1/Qrb+mCJeeYrr7GBNi1QjZ7pkBCV62byq+dTjcbKSqNx8ChpMsoIrl/Kyu+PQU57d/hzlScfJ5NrbtA3xnnh8daff8ChcPDBIRwL45Gfkqczj4vJSynA8Cr5QKSwnbM+PJSc3zNoFWnsOoRyU8ZwCUnJH/O5nBX1+RYXfV4rX47OuphYKoBYNVfOlwMTPSek7HG5HCgfcMiiSXIlX87nIXpYXARLmcsFDl3MTbbWCus/r6/dmg4Jz8xelHNWylCpQ4yKeYYTzfshyYZKiCXLUW+x6F3EQDKVmp722o01CbWXqux5vljMLfeUxrn03C4uBgocVSsJkZq3mPI5jGAMuwhg/ru29vDn/zy+NGOHp0MgCj8s58qHTBHOQpHhF/MBczMIiv4cKNbro0PlH70pH/z+QXK2FS367EZBQNH445zXa59vrHUUa8VKRad0FXcGJAPT0z67jMdu5+1oESAHCszQmQqG7dZ8mRiLlvh6+ft8QVKUdmJuNGyRnUEUMIip7kNoNxBozC6vFUyzsPbNVN4GRH+o8FvA+njD510MnMrtUN7RbtvyBpaZ2DuRhDnWeN4+duvnPCDKv9LUCZXjU5dukxBWFqXnZfuAeSgR5S6MrAUha1sfZCfwRUIKS756YXIJQ1GC9ZHl7ehiqrxGRO2O/ze36M0dkk6XEvYtN6KL1rQLbopKNPnzlsmZxDESJRJZtryLxXyyhFEX55dvaqiE4BT6+m75YcnDRZOQrFJQIszKG3SQrUGXCMkGh7vDVhKM+yD2ergNM+tQcvrczBmfN9owOv4TXjrdjqbsWdH7JnOPzDBiRBUDYgpZDlhF65Bc0dU0XEIKeE1yuJs7lbGpQfRVgRJh3WidGMOZZVQgoqqqkU6iQEB3jUbUGz1wdEiTZm2YOEnWLibJirQeTYGdJhoQoYpbdZ8lG5IEgcOPxZT1syT3d7dDJYSjwe/0sDzl4R5hmbnbxGmGAZE8wO6pHkKdU0kQBSuKxrmqEJ0dRL3eFS6eLkLJWnk6Gv2NuZ1TEmVyxU7ZB6QzhRw8ikJVzj1cYwe2N1rUruhtGi4hcWJeSpYfsJII3zjnXiC0+ycbqDjYh5CEU4QoRBZVWolsQmI77RCCS2gsgq02mRO7EposF6P55d6Hs4i8A9JJJrHnltdX1G+VED2/bgiDuHoKl4NeQ5Z11rC27WmT6BcIiemBH5H+gm71zjJxOJWxM5uaa8nlrdn1gwMvJLbTE4IB+AQwS9P2IXOGVqQDO+Vd0VmbEPwljKJ5+nh566f1gz+KkNDM6Ffc71AI4eTGNNIZEFOyJ40k2kmq6Gw6moNo40Lnh8K5oeN/T4wJRb62NfaSHZJUWpLM5T9XIKYRNVqsRPqmPe1LJubMotfX0LgTXpoz3pT1qJ3eQh5vcOl3cazwInAw2LAZcLa3SkgWDVbtHxW3m6+fQoBPFU3/YIMn9fT6CdAegx/V9vZevi9pOrk2I7kUD4FtXjsIfLAWU9Op1GKnSAuEnM8rbN1a9AacwpTMfrKi0ZlCW6MwG1rbDOQgYUl5Fzs13lsipMBUUuDEmiaVqv98ys5UgUJQUoDLJbr0+N+BU0JUcmZgZXxbz+4lVuPpdHhhfj9L+XUNoKKi7zsnpMrG4Ycc0MFgFGLj7cBMtJfQWiAatTclrP8onpWoiLGdvlzwt998b/vAlFvf5zAo356JDl+H2rbArcA8kZ42W/uVVrPEu6s0ImiBK9WtlQLDWX9OSFa07D8qJy9fbtQX/JFIONHUr21Pu0CI8N+2oytRu+z7eXYLg+Mn9MDqIiSrxqtotBgwdRW07XE+ivqkYDIExxoH+WjKGy1vv5r9annt1HTxdWvohNpv0lKztpNYXdirGrrmVnp2Q4vCFGSRBzph4rbOz6cbLg/WdXR6VFmIxNILR0/0TyR0GIguLtqvlk2MGymBJPk3iIy7CLGHgVSq/IKD22CbkJIU3Rh+4L3ywxwA2W4smxKWy4ikswe5oRLCGydEM0i1VUnMxefevqeG8xxnuafgK55n8Z9D3ratjkVQ3Ronqt5+X9b1jXAkGIzwa3So1w5pxMxDorD9QGPtCjjYFnBX0TNC4AnMmagVbTCPrpqBYirwE5Pb9dbft4vg+p8bjDv1RdUNef+wCVGDZluZUCQYS789knR0RnK70b4X0dqayig5f8ENlpvyCbX9QapqvO6PxcI1ejkf6kuIIW/IEz5MR60DLJsqnVpULyHI3GZzUV/+lLnZi7zXu212rows5yFCOzBU4izs4Uau5/b0sAmxvXl/MOaPpTe4zrnbqYdTUXEXPCjVYFjqcrkxzj/vxCelo1rryNNJ0CXK9BqAjjy7ZnEfkqeCo0Oiu41AEOwNrDGVdCwiJb2EwDWcBhZT9iZz84bltTZJ59cnbVqpKBzLO79NmKZD1iFcJdgPByMxP/z2v6a62w3egVPQWEK4rkEIpFMG+QCCgSgWcmlN56Vsdam1V4nEEy9LWpe9Irw6FwzGFrIfr8UThRUCEOH8AawQSsMLyXt3WxuVLuiQrOpTGCm7+FrAm8q1C3h4xJTPuzjT9SQbyNqGT4g/S2cisVgsmJ6rfH30lFNRD6dCNIAk6fAPpNJsvqm19l5HMvOh0Oq3387tN3XDo59naHCCbNgf8682ryNEkttA6E+IFM8I4b1dRUisRuWi3twyeWBD7Nhx9RDETmEIZJ4r7fAJ4ZMYspUFf9APkPzB1dX5TL2yv79/socC/9jfqbzORCKh0Px8OO33p9P+YAQCn2d7SyXpCSdc6cphZTkbh+kaavap7UmK1qmYwF18AxPLfiQKGgoQslI5UyZCjWROKZMOrJSvh5A66Y2m7J8xGMpttUuy6Cymor5o9JQqophGFF1hZHO43h59pk6PTyIL8UgsGAlmYpFI0O/3h4X4USXSgA7nINqqcDq+MF/fqFU52Pe2C+sajR4tZILB0HEfQgp1c9pezZqYbESxoMGxYqCwTYjxtl+UiNNGoanMnIW3vd2EuMJnLa935ief5QuYbWeJtTcMfvIvSjrmAQpVSiXXLCQlQyWElsCtGbz6fu91PbGwuhoOIZAuARseC4VCC3NzifrOL7WjLDV0RVUhv1fE9rvucVtptENP+5yLG6bRzmPYkwfbgKAI3gsr0Ww5ByFfao06CxPMeDHz/WLK26NDMOkLATgmGl20ntO2rxDVyfJicfHHU7CQ1DnWm1+8hbwMDqEYT5PScfPX1t7exut3kUwmkkgk4K9M/fXrjZNWrXlcZe3rUhTlYn1I+DJZrsMczAQvP3oHFfXVq8NkwTTNta9WbF+qmH/oPPpBln8vQsTsK24VJjW3ubZVtKMWJmcr+vmqMsJoCMUqBh6f7bUF1+X60YdpGByrK661rUbOmhZZhzbkGqM4DEsQYPLg9kSIrIGApXZDzCPsNRI4D4b6nlpbiteDQf9Lo08BnfMfLKsMaVMgAGlDKlo+4O34UGXLeWxEjmIX10wg7yva09MQDFwgRJYDmJNar4yurEZhy4EijJYPBCCpg+wePNuKLzV8QhLaUY2CsSBuQnWPiqYPsnvCQdC/cw28vnymG30GU8AKkDrarEypHyFNmwJ3XUytpHy+6aI3v4mLhIKQohizMINWvMV2Tm//fLrpEzXGbkKyse1LpaZnlhnpJkQf5UHhfvQC9enpqC/QKDyyUt4ZcLG3U/2gOtdKWX5pqbLPeboHxFiWaU9aCXCI87WL5TXxCQViPd9iFKZAymfnvQ8760niivWtgCVWE8ExBVJbBsNNWt7JniKBTB7hTpOZ3kdBypxtlX2+IgD2eq1y6iudbe5a9rZH7b97aWBCkIe+/5/stcuF/Qhp0lEIXGF4R1LVPkco/OGDqZWZQDkfaGwuuyS3dEaIU8LWNmfydj4fmPnhhcm4+vD57PrsxAVChc0/1x+8uNDPrXhYYXMmF8jDwVMvTM6Nr9bX12d1tX+r3ECEYBbptFr/9ju9JF/uBsefMRGBgSC+hklHhOXq3D8hejYTzGTCldKTvhYAZzAxJsFSmzrBKP08qoS3VCYZa4+TjwsuwiDfYwQy9QvP66PwCifs4uPVZbdK2ORaEo41dUY8XMVDITzoX+kciBDnqv51IhLe03T18tYW3P+iaxOG6ELhT5vHhuE5r6S5jSfZuj+STu+XIBL4yxXxbvlLS5QDt/EPRIjoem0VwsLge/TbFz8tnJmu8ezxm71KHQKkGgMUnSqgm1Xr6Yg/8Qs31Ct3UMvny1p9hFJnBeEjF0qufg9v8CNvd1/DzQnJXI9E/BDQJHaaWQjBMB2DP3VkQ1i2elR7uVGpz88nMOT2++feZnUn9VeZTpv1tD+caUr8r1zmZ5TBCFG6Fw9CxBfxhxL1d9+9fPmyVqu9fLm3sV+B1+LxeDgWRIIZlAhkF79iwZVyCDZbcX8oUoPI4KM6cA9kQEKau5UA7cDkLBPDVCMcDjn5GSRrKH4/1hAxc4P8LHNyBBMKjC49frc697bGdIUr/cPJ+yODEQLRs7X9yHwoFIPpBtm+H/LYSAR4Bf2xIKpXJhROI5ydvaWsgcm0YhjZ7xKVVpWJVbZ7/6ymQQkpMGU0SGJbG6/rkfmFhVBoLhSOh2F+hRfgp0z93cZe69fjLITYmopZg6TwX/feZxWINJWbtRDfsQwaMVLxYA9wWZCRYc2setRsNo/wj+rxcbbECMUEDQI8dGNOYdjjgTROJURWRuJRsQPH1J1xsLzYe8NUvHyhHnTfrc5lGSYherbu0/6aU0mswHzxhHAAxhl+7+IV7zvJx1Av+w5lGISMJ7ox2f1EuN73MYsa3cfCDoMQRP7VjQ2ju0IviuSSMEUQQcs61Yf4/Sh3LAMSwhRC562FdOy9rulcJ0RRVapwjVIsNDJZ1yH/qC5VNZ2M6HMbBiekqfvzmYx/td5qZjn4M02DZF7XcV2x9PTo19ZGJROPL7RKuBH/CyVUjfvFEnU4FKtXdjZOTl6+PDk52dipZIJhiCDxTchIMm+k0TRGAxNSqFEPR2KZDGZhkGjEQvOJxHwM81VIykQO4khiv3pdD8y9lCEQUrN7iTTk8EgI0nwUVCn4Z7BDCN7xLwR/Gckv5BysgsYxklZ0PduqJHAF2t9BhFQQVDCCkGL+eOL10mTfB1Xee2iDZa74IUy7wGVlj1o79URoLo6lj3Q6LICF/eH4fAzy+mbW0PtF0yPg3m5AqOtVVprEvnJVwf2UmsRL1eZSrSXaG/Z39vf3Wq3a++Mso5qhMEYv45DVvxUhkWLhmoVhUI79QK1/HP3TpXTeI+jg9UvZOiT9hCkXF4OcgxTFmLgyFr8v8imE8BHKoCjVpb1Kor7/5qmhUt65P6dLUGrXMzCQpJ0y/FVVVhyPLpHBdlHfvvx1Qui2pGxtvx6KxzeaHBIJTjT1vGVAFg05PTpEnPWIsyWZniQfO5v1yWcl/e+iQ7j2dbwfDoFneluFiaZ1Ch2feLLObMOFU6VaqXOntef+UvoEQm5Iv4KxdCT+3lCJrsntgz/xZE6nDI7MqnuZ1T2d4ZrX0L6TcPjy1wnR6nwiAwFOJF1f4pB4gffiBKtCvWvll8Z3/oLEHyu1Kj5lAY09r9beJeLfvmUe0E1Vy04a97Ui+wmEjP24PxbDHuG5+t7ScQksjEhRu53RZX/VJqSqmgIscHrybPPl63oi4U8nNjDVVXWjVCmNPiFJMXitHg+n035IutKxeP31fqvWrGZL/K/dm86zx83ay413kVAcl47Sc2+PdLfqVqmefRe5v0XIT/D2+JWIx61KbAHCZcwuYv5weGEulKm/3tn/pVWrvXnTbDaPQaqOHB83j5pv3ryptX7Z26/UM5H5eQi4EzFIQ9LpRObkiOtupnPdeJNZrdF7+x15n0RIgVlCS0e1/UpmNZ6O4Vq8mHdpTDNCc+FQOLQQnsPkPhSCf4cWVuO4CItKB58VKRtkuPG5yNtWk2NDCNepZ+ndfPydQf4GhIQjcuP+WaoxCKlr372uZxLhhXAs4qzN49IzZquxGKb2Ys0VM1h4Czuv4fVQbD5Sf9taqpYk3SCEK5Q/bT0L+dOVkqLKfxNCXQGNZFDienr85g3kYTuVej0DShSOgx7hemtbQpDJhmKJTL3++vUJ5GjVp9hDTilHk82rLyuheX9m7oT16a25N3JDQniMkdU13K4KN23ohE1ms1lhfJrNpbYIs1R9+nQSXBYkc+D6NJXj5/XScW0jOO/3Z0Lx+hH19Hl01L2Rm1c/tNL//l/TBXS4rrvBjGiahnujsHnYmS/wEhZeNSLrOm6OweZYzeCl4zd7bzNOdTYU32lqVLnX35Jzc0Ju/X3i23Cl1cwyohlw8xQg4GPJxMOzgAoMoQuBoJnqrATOfmlvp56Zj4XCwUjaH0+8q2UNBfvu77EK3bzjHFTEyNYqC3OroUxl56T2/qiadXHOsbkSV8uwy5JPABZRMtrYefssk5jD6po/EgyH5uef7b3P4l4GbPS+198jNECNEXMykq3t1WNgj+Px1fjcQhBscr1Sefu2UsEAKJgIxRcgeA5jeRZcPji28NzcfGW/1XzKqK5fribdQxmoCks1yBg03YW768CdJYJzgAr+lwZvBj4MW6xgRoXnE/DjXKL+7N3OHkThT3E7mqz16Z69lzJYnVomRFO4oeGzDSXuwi13SzCnTk6+2+jIycnXtTdLzWOYg0R36kVEIRfy3fssAxG6KNdsVqX3N7X4iAxKqOdDncdG6M5+TkqdNqL2R+5vcvpRGaoOtYe84vVRVCDpVgj9zWRM6DoZE7pOxoSukzGh62RM6DoZE7pOPkJoRPKm2xYEpKpjQlfLmNB10o+QBwmpziP2P/f1fX7pITQ5JnRZriDk7hAai3xGyOMQcqEdcrRojMgRBKQCoDNCApEzzzr1nS9WOl+9h4AmJnoIOYi6v6LvSxX1TIMQUDch95iQkHNA3YQQUYfRWAQgoUIOITTVDiLPGJGKTszdVqEJgCMIdWvRWIT+nM2xNiEHUVuPxuLoTxtQm5Az0QSiiS9cOoQmJ3sJufCFyc99dfdGzvB0EXIQjeVMXJcIjTF1xNUrkmssH5f/Bwz00JQ+sAfdAAAAAElFTkSuQmCC" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+
+            <h2>Rodrigo Souza</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>System Analyst and Developer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>São Paulo, BR</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>emailzinho@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>11 99999-9999</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>JAVA</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          </div>
+          <p>IONIC</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+          <p>ANGULAR</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+          <p>MySQL</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">60%</div>
+          </div>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>Portuquese</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:75%"></div>
+          </div>
+          <p>Spanish</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:30%"></div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>System Analyst JR / itau.com.br</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Description ...</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Programmer Perl, Developer Java, System Analyst PL / jacotei.com.br</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2014 - Jun 2017</span></h6>
+          <p>Description ...</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Intern, Programmer Perl / buscape.com.br</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2013 - Nov 2014</h6>
+          <p>Description ...</p><br>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card-2 w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Faculdade de Informática e Administração Paulista (FIAP)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2018</h6>
+          <p>MBA Application Development with JAVA, SOA and Internet Of Things</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Universidade Nove de Julho (UNINOVE)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2016</h6>
+          <p>Bachelor Computer Science</p>
+          <hr>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+<div class="w3-container w3-card-2 w3-white">
+<div class="w3-container">
+<h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> São Paulo, BR<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="formularioServlet" target="_blank" method="post">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
