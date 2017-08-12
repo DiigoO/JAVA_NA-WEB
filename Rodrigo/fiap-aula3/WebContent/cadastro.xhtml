@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      
+<head>
+	<title>Cadastro de usuario</title>
+</head>
+	<body>
+		<h:form>
+			<p>
+				<h:outputLabel value="Nome" for="txtNome"></h:outputLabel>
+				<h:inputText id="txtNome" value="#{cardapioMBean.nome}" required="true" requiredMessage="Nome obrigatorio"></h:inputText>
+			</p>
+			<p>
+				<h:outputLabel value="Preco" for="txtPreco"></h:outputLabel>
+				<h:inputText id="txtPreco" value="#{cardapioMBean.valor}"></h:inputText>
+			</p>
+			<p>
+				<h:selectOneMenu value="#{cardapioMBean.tipoSelecionado}" >
+				<f:selectItems value="#{cardapioMBean.tipos}" />
+				</h:selectOneMenu>
+			</p>
+			
+			<h:commandButton value="salvar" action="#{cardapioMBean.salvar}"></h:commandButton>
+			<h:messages />
+			
+		</h:form>
+	</body>
+</html>
