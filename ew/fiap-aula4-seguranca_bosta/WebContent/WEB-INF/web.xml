@@ -3,7 +3,7 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
-	<display-name>fiap-aula4-seguranca_bosta</display-name>
+	<display-name>web-project-security</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
@@ -16,7 +16,7 @@
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>Admin</web-resource-name>
-			<url-pattern>/privado/*</url-pattern>
+			<url-pattern>/private/*</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>role-admin</role-name>
